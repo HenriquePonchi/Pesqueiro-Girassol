@@ -1,0 +1,64 @@
+PESQUEIRO GIRASSOL — CARDÁPIO ONLINE
+=====================================
+
+O que tem nesta pasta
+----------------------
+- index.html   -> estrutura da página
+- style.css    -> visual do site (cores, fontes, layout)
+- script.js    -> cardápio, carrinho e envio para o WhatsApp
+- LEIA-ME.txt  -> este arquivo
+
+Como usar
+---------
+1. Abra o arquivo "index.html" duas vezes (duplo clique) para testar
+   no seu computador, ou envie a pasta inteira para quem for publicar
+   o site.
+
+2. IMPORTANTÍSSIMO — Configure o número do WhatsApp:
+   Abra o arquivo "script.js" em qualquer editor de texto (Bloco de
+   Notas, Notepad++, VS Code, etc.) e troque a linha abaixo, perto do
+   topo do arquivo, pelo número real do pesqueiro:
+
+       const WHATSAPP_NUMBER = "5513999999999"; // <-- TROQUE AQUI
+
+   Formato correto: DDI (55 para Brasil) + DDD + número, só números,
+   sem espaços, sem "+", sem traço.
+   Exemplo: WhatsApp (13) 99999-9999  vira  "5513999999999"
+
+Como funciona para o cliente
+-----------------------------
+1. O cliente navega pelas categorias (Bebidas, Porções, Lanches, etc.)
+2. Em itens que têm Meia/Inteira, ele escolhe o tamanho antes de
+   adicionar.
+3. Ele ajusta a quantidade e clica em "Adicionar".
+4. O carrinho (botão no topo) mostra todos os itens, quantidades e o
+   valor total, com opção de aumentar, diminuir ou remover itens.
+5. Ao finalizar, ele preenche Nome e sobrenome, Local (mesa ou local
+   do pesqueiro) e, se quiser, uma Observação.
+6. Ao clicar em "Enviar pedido pelo WhatsApp", abre o WhatsApp já
+   com uma mensagem pronta contendo todos os itens, quantidades,
+   valores e o total — só falta o cliente apertar enviar.
+
+Como colocar o site no ar (opcional)
+--------------------------------------
+Esse cardápio é feito só em HTML, CSS e JavaScript, então pode ser
+hospedado gratuitamente em serviços como:
+- Netlify (netlify.com) — arraste a pasta e pronto
+- Vercel (vercel.com)
+- GitHub Pages (pages.github.com)
+
+Depois disso, é só gerar um QR Code com o link do site e colocar nas
+mesas do pesqueiro.
+
+Personalização rápida
+-----------------------
+- Itens, preços e descrições: edite o array MENU no início do
+  arquivo script.js.
+- Cores e fontes: edite as variáveis no topo do arquivo style.css
+  (bloco ":root").
+- Nome/logo do topo: edite a tag <header class="topbar"> no
+  index.html.
+
+Qualquer item ou preço que precise ajustar, é só editar o texto
+diretamente dentro do array MENU em script.js — não precisa mexer no
+restante do código.
